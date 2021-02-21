@@ -1,0 +1,1 @@
+This game is actually a challenge from web development bootcamp course by dr angela yu but i made a slight upgrade such as inputting user name and a leaderboard at the end of the game so that the user will be able to see their rank among other player

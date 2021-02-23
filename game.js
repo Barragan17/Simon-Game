@@ -48,19 +48,16 @@ $(document).on("keydown", function(){
 $(".btn").on("click", function(){
     var userChosenColor = this.id;
     userClickedPattern.push(userChosenColor);
-    console.log(userClickedPattern);
     playSound(userChosenColor);
     animatePress(userChosenColor);
     gameCheck(level);
 });
-console.log(level);
 
 function nextSequence(){
     var rand = Math.floor((Math.random())*4);
     var randomChosenColor = buttonColours[rand];
 
     gamePattern.push(randomChosenColor);
-    console.log(gamePattern);
     
     var chosenColor = $("#" + randomChosenColor);
     chosenColor.fadeIn(100).fadeOut(100).fadeIn(100);
@@ -125,7 +122,6 @@ function startOver(){
     //     console.log(sortedMap);
     // }
     // console.log([...myMap]);
-    console.log(sortedMap);
     score = 0;
     nama = "";
     level = 0;
@@ -153,7 +149,6 @@ function generateTable(){
             var cell2 = row.insertCell(1);
             var cell3 = row.insertCell(2);
             var key = Array.from(sortedMap.keys())[i]
-            console.log(sortedMap);
             cell1.innerHTML = i+1;
             cell2.innerHTML = key;
             cell3.innerHTML = sortedMap.get(key);
